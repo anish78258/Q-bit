@@ -6,12 +6,6 @@ export default function HeroSection6() {
         <div className="absolute inset-0 -z-0 opacity-90 w-full min-h-screen">
           <img src="/4k-space-background-8i7qa8k0drvwnv35.jpg" className="object-cover w-full h-full" alt="Background" />
         </div>
-        {/* <div className="absolute -top-[700px] -left-[100px]">
-          <img src="/Gradient3.svg" className="relative" alt="Gradient" />
-        </div>
-        <div className="absolute opacity-80 md:opacity-100 -top-[700px] -right-[1000px] sm:-top-[500px] sm:-right-[800px]">
-          <img src="/gradient1.svg" className="relative" alt="Gradient" />
-        </div> */}
   
         <div className="flex justify-between w-full items-center relative z-10 px-2 sm:px-10 py-3">
           <div className="flex">
@@ -42,13 +36,6 @@ export default function HeroSection6() {
             GET STARTED
           </button>
         </div>
-  
-        {/* <div className="absolute -bottom-[800px] -left-[600px] sm:-bottom-[700px] sm:-left-[500px]">
-          <img src="/gradient.svg" className="relative" alt="Gradient" />
-        </div>
-        <div className="absolute -bottom-[350px] left-[450px]">
-          <img src="/Gradient2.svg" className="relative" alt="Gradient" />
-        </div> */}
       </div>
     );
   }
