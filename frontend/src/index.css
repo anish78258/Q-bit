@@ -1,3 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #1a1a2e; /* Dark background */
+    color: #f0f0f0; /* Light text color */
+}
+
+body.dark-mode .bg-glass {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle glass effect in dark mode */
+    backdrop-filter: blur(10px);
+}
+
+body.dark-mode .hover\:bg-gray-800:hover {
+    background-color: #333; /* Dark hover effect */
+}
+
+body.dark-mode .sidebar {
+    background-color: rgba(26, 26, 46, 0.95); /* Dark sidebar */
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Light Mode */
+body {
+    background-color: #ffffff; /* Pure white background */
+    color: #333; /* Dark text color for visibility */
+}
+
+/* Enhanced bg-glass for light mode */
+body .bg-glass {
+    background-color: rgba(255, 255, 255, 0.8); /* More visible glass effect */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Sidebar specific styles for light mode */
+body .sidebar {
+    background-color: #f8f9fa; /* Light gray sidebar */
+    border-right: 1px solid #dee2e6;
+}
+
+/* Hover effect for light mode */
+body .hover\:bg-gray-800:hover {
+    background-color: #e9ecef; /* Light hover effect */
+}
+
+/* Common styles */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+}
+
+/* Optional: Add transition for smooth theme switching */
+body, body.dark-mode, .bg-glass, .sidebar {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+@layer components {
+    .bg-glass {
+        @apply bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 hover:bg-gray-600/10 border border-gray-800 text-white;
+    }
+}
